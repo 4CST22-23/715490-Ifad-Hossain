@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Website Header = Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <nav>
+        <img src="travelling.jpg" class="logo">
+        <ul>
+            <li><a href="#">Travel World </a></li>
+            <li><a href="#">Famous Places</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+        <button class="btn"><img src="travelling.jpg">Bookings</button>
+    </nav>
+
+    <div class="content">
+        <h1>Beautiful<br> places to explore</h1>
+        <p>Ensuring that the world heritage sites sustain their outstanding universal value is an increasingly challanging mission</p>
+        <form>
+            <input type="text" placeholder="country name">
+            <button type="submit" class="btn">Search</button>
+        </form>
+    </div>
+
+</div>    
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive website landing page = with background video slider</title>
+    <link rel="stylesheet" href="style.css ,text-javascript">
+</head>
+<body>
+    
+    <header>
+        <a href="#" class="brand">Travel</a>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="#">Home</a>
+                <a href="">About</a>
+                <a href="">Explore</a>
+                <a href="">Gallery</a>
+                <a href="">contact</a>
+            </div>
+        </div>
+    </header>
+
+    <selection class="home ">
+        <video class="video-slider active" src="travelling3.jpg.mp4" autoplay muted loop></video>
+        <video class="video-slider  " src="travelling2.jpg.mp4" autoplay muted loop></video>
+        <video class="video-slider  " src="travelling4.jpg.mp4" autoplay muted loop></video>
+        <video class="video-slider " src="travelling5.jpg.mp4" autoplay muted loop></video>
+        
+        
+        
+        <div class="content active">
+            <h1>wonderful.<br><span>Island</span></h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti, neque! Porro dolore nam reprehenderit fugit ex cupiditate repellat modi quaerat. Aut illum magnam dicta at fugiat facere delectus, tenetur minima.</p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="content">
+            <h1>camping.<br><span>Enjoy</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem beatae corrupti quis facilis asperiores, praesentium dolore. Sapiente maxime, quos quas laudantium veniam voluptatum, quisquam ullam perferendis amet cum, magnam minus!</p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="content ">
+            <h1>Adventures.<br><span>off road</span></h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro corrupti adipisci praesentium cum cumque libero impedit aut, dolorem illo officia dolore nihil, necessitatibus suscipit sed ipsam. Eaque aperiam amet laudantium?</p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="content ">
+            <h1>Road trip.<br><span>Together</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cupiditate ipsam placeat assumenda quidem iure, deleniti ratione laboriosam eaque molestias sint odit veniam dolorum saepe nesciunt non ducimus odio possimus?</p>
+            <a href="#">Read more</a>
+        </div>
+
+        <div class="media-icons ">
+            <a href="#"> <i class="fab fa-facebook-f"></i></a>
+            <a href="#"> <i class="fab fa-instragram-i "></i></a>
+            <a href="#"> <i class="fab fa-twitter-t"></i></a>
+        </div>
+        <div class="slider-navigation  ">
+            <div class="nav-btn active "></div>
+            <div class="nav-btn "></div>
+            <div class="nav-btn "></div>
+            <div class="nav-btn "></div>
+            
+        </div>
+    </selection>
+
+    <script type="text/javascript">
+        //javscript of responsive navigation menu
+        const menuBtn = document.querySelector(".menu.btn");
+        const navigation = document.querySelector(".navigation");
+
+        menuBtn.addEventListener("click",() => {
+            menuBtn.classList.toggle(active);
+            navigation.classlist.toggle("active");
+        });
+
+        //javascript for video slider navigation
+        const btns = document.querySelectorAll(".nav.btn");
+        const slides = document.querySelectorAll(".video-slide");
+        const contents = document.querySelectorAll("content"); 
+        var sliderNav = function(manual){
+            btns.forEach((btn) => {
+                btn.classlist.remove("active");
+            });
+
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+            });
+
+            contents.forEach((content) => {
+                content.classlist.remove("active");
+            })
+
+            btns[manual].classList.add("active");
+            slides[manual].classlist.add("active");
+            contents[manual].classList.add("active");
+        }
+
+        btns.forEach((btn,i) => {
+            btn.addEventListener("click", () => {
+                sliderNav(i);
+            });
+        });
+    </script>
+</body>
+</html>
